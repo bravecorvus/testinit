@@ -48,6 +48,6 @@ func VibOff() {
 
 func main() {
 	VibOn()
-	time.Sleep(time.Millisecond * 50)
+	time.Sleep(time.Millisecond * 500)
 	VibOff()
 }
