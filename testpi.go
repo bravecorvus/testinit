@@ -4,17 +4,17 @@ import (
 	"fmt"
 	"time"
 
-	"github.com/robfig/cron"
+	"github.com/roylee0704/gron"
 )
 
 func main() {
 	t := time.Now()
 	currenttime := t.Format("15:04")
-	c := cron.New()
+	c := gron.New()
 	//Run the following once a minute
 	//Check all 4 alarms to see if the current time matches any configurations
-	c.AddFunc("0 * * * * *", func() {
-		if currenttime == "6:35" {
+	c.AddFunc(gron.Every(1*time.Minute), func() {
+		if currenttime == "6:50" {
 			fmt.Println("YOLO")
 
 		}
